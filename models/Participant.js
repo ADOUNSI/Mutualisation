@@ -1,4 +1,5 @@
 // models/Participant.js
+import mongoose from 'mongoose';
 import Utilisateur from './User.js';
 
 const participantSchema = new mongoose.Schema({

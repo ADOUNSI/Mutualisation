@@ -24,13 +24,17 @@ export const getUserById = async (req, res) => {
 //  Créer un utilisateur
 export const createUser = async (req, res) => {
   try {
+    console.log("Données reçues :", req.body); // Voir les données envoyées
     const newUser = new Utilisateur(req.body);
     await newUser.save();
     res.status(201).json(newUser);
   } catch (error) {
+    console.error("Erreur lors de la création :", error);
     res.status(400).json({ message: "Erreur lors de la création de l'utilisateur", error });
   }
 };
+
+
 
 
 //  Mettre à jour un utilisateur
