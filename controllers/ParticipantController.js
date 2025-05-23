@@ -23,7 +23,8 @@ export const getParticipantById = async (req, res) => {
 
 // Créer un participant
 export const createParticipant = async (req, res) => {
-    console.log("Route POST /api/participants activée");
+    console.log("Données reçues :", req.body); // Vérifie les données reçues
+  
     try {
       const newParticipant = new Participant(req.body);
       await newParticipant.save();
@@ -33,6 +34,7 @@ export const createParticipant = async (req, res) => {
       res.status(400).json({ message: "Erreur lors de la création du participant", error });
     }
   };
+  
   
 
 // Mettre à jour un participant

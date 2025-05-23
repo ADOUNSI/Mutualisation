@@ -5,6 +5,9 @@ import projetRoutes from './routes/projetRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import transactionRoutes from './routes/transactionRoutes.js';
 import participantRoutes from './routes/participantRoutes.js';
+import groupeRoutes from './routes/groupeRoutes.js';
+import bienacquisRoutes from './routes/bienacquisRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
 
 const app = express();
 
@@ -16,6 +19,10 @@ app.use('/api/projets', projetRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/participants', participantRoutes);
+app.use('/api/groupes', groupeRoutes);
+app.use('/api/bienacquis', bienacquisRoutes);
+app.use('/api/admin', adminRoutes);
+
 
 // Connexion à MongoDB et démarrage du serveur
 const startServer = async () => {

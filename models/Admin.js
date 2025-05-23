@@ -1,4 +1,5 @@
 // models/Admin.js
+import mongoose from 'mongoose';
 import Utilisateur from './User.js';
 import bcrypt from 'bcrypt';
 
